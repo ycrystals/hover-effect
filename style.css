@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: url('https://image.freepik.com/free-photo/young-smiling-woman-with-arms-crossed-against-green-background_33839-10968.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container span {
+    display: inline-flex;
+    width: 9.7%;
+    height: 40px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.fall {
+    z-index: 1000;
+    background: #f00 !important;
+    transition: 0.3s;
+    pointer-events: none;
+    animation: fall 2s linear forwards;
+}
+
+
+@keyframes fall {
+    0% {
+        transform:  translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(1000px) rotate(25deg);
+    }
+}
